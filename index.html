@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas en Clockify</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Reporte de Bugs en Clockify</h1> 
+        <hr>      
+        <!-- Menú de navegación -->
+<div class="navigation-menu">
+     <!-- Funcional - Escritorio -->
+     <button class="funcional pc" onclick="showForm(1)">
+        <i class="fas fa-bug"></i><i class="fas fa-globe"></i>Bug 1</button>
+    
+    <!-- Funional - Browser -->
+    <button class="cosmetico pc" onclick="showForm(2)">
+        <i class="fas fa-bug"></i><i class="fas fa-globe"></i></i>Bug 2</button>
+    
+    <!-- Funcional - Celular -->
+    <button class="funcional mobile" onclick="showForm(3)">
+        <i class="fas fa-bug"></i><i class="fas fa-mobile-alt"></i></i> Bug 3</button>
+    
+    <!-- Funcional - Celular
+    <button class="cosmetico mobile" onclick="showForm(4)">
+        <i class="fas fa-bug"></i><i class="fas fa-globe"></i>Bug 4 </button> -->
+
+        <!-- Funcional - Celular
+    <button class="cosmetico mobile" onclick="showForm(5)">
+        <i class="fas fa-bug"></i><i class="fas fa-desktop">
+        </i>Bug 5 </button> -->
+
+       
+
+
+
+</div>
+
+        
+        <div class="form-container">
+            <!-- Formulario 1 -->
+            <div class="form" id="form-1">
+                <h3><i>[Informes]</i> Error al exportar informe de horas trabajadas: archivo PDF vacío al no haber datos disponibles.</h3>
+                <h3>Descripción:</h3>
+                <p class="descripcion">Se reporta que al intentar generar un informe de horas trabajadas sin datos, el sistema genera un archivo PDF que no contiene información, lo que puede generar confusión para el usuario.</p>
+
+                <h3>Precondiciones:</h3>
+                <p class="precondiciones">1- El usuario ha registrado previamente el correo electrónico en el sistema &lt;/EMAIL&gt;.<br>2- El usuario debe estar en la página principal de Clockify &lt;/URL&gt;.<br>3- El usuario se encuentra en la sección "Espacio de trabajo".<br>5- El sistema no cuenta con datos de entradas de tiempo registradas.<br>6- La configuración del idioma del sistema debe estar en "Español".</p>
+
+                <h3>Pasos:</h3>
+                <p class="pasos">1- El usuario hace click en la sección "Informes".<br>2- El usuario hace click en el dropdown "Proyectos" de filtros.<br>3- El usuario hace click  la casilla "Sin proyectos".<br>4- El usuario hace click en en el botón " Aplicar filtro".<br>6- El usuario hace click en el dropdown "Exportar".<br>7- El usuario hace click en el botón "Guardar como PDF.</p>
+
+                <h3>Resultado Esperado:</h3>
+                <p class="resultados">El sistema debería mostrar un mensaje claro indicando que no hay datos para exportar y no generar un archivo PDF vacío.</p>
+
+                <h3>Resultado Obtenido:</h3>
+                <p class="resultados">El sistema muestra un mensaje de "Exportando informe PDF", genera un archivo PDF, pero el archivo no contiene datos de horas trabajadas.</p>
+
+                <h3>Detalles del Problema:</h3>
+                <div class="priority-severity-container">
+                    <div class="priority">
+                        <div class="indicator"></div>
+                        <p><strong>Prioridad:</strong> Alta.</p>
+                    </div>
+                    <div class="severity">
+                        <div class="indicator"></div>
+                        <p><strong>Severidad:</strong> Alta.</p>
+                    </div>
+                </div>
+
+                <h3>Entorno:</h3>
+                <div class="environment-container">
+                    <div class="browser">
+                        <p><strong>Escritorio:</strong> Windows 10.</p>
+                    </div>
+                    <div class="environment">
+                        <p><strong>Ambiente:</strong> Producción.</p>
+                    </div>
+                </div>
+
+                <h3>Archivos Adjuntos:</h3>               
+                    <div class="gallery-item">
+                        <img src="img/r.png" alt="Descripción de la imagen 2">
+                    </div> <br>
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="img/r1.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                </div>
+                <!-- Nueva sección de Justificación -->
+                <div class="justification-container">
+                    <h3>Justificación</h3>
+                    <i><p>Prioridad Alta:</i>
+                       <strong>Este problema afecta directamente a</strong> la funcionalidad de un reporte esencial que los usuarios necesitan para su gestión diaria. Solucionarlo es crucial para evitar malentendidos y mantener la confianza del usuario en la herramienta.
+                    </p><br><i>Severidad Alta:</i><strong> La falta de información en un reporte: </strong> puede causar confusión significativa para los usuarios y afectar la credibilidad del sistema, especialmente en un entorno profesional donde la precisión de los reportes es crucial.
+
+                </div>
+            </div>
+
+              <!-- Formulario 2 -->
+              <div class="form" id="form-2" style="display:none;">
+                <h3><i>[Proyectos]</i> Discrepancia en la traducción del nombre del proyecto en el mensaje de éxito y en la lista de proyectos.</h3>
+                <h3>Descripción:</h3>
+                <p class="descripcion">Al intentar crear un proyecto llamado "NDA" en la sección "Proyectos" de Clockify, el sistema muestra un mensaje de éxito que indica "Se ha creado el proyecto NDA", pero en la lista de proyectos disponibles se muestra como "Acuerdo de Confidencialidad". Esta diferencia se debe a un problema en la traducción, lo que genera confusión en los usuarios.</p>
+            
+                <h3>Precondiciones:</h3>
+                <p class="precondiciones">1- El usuario ha registrado previamente el correo electrónico en el sistema &lt;/EMAIL&gt;.<br>2- El usuario debe estar en la página principal de Clockify &lt;/URL&gt;.<br>3- El usuario se encuentra en la sección "Espacio de trabajo".<br>4- La configuración del idioma del sistema debe estar en "Español". </p>
+            
+                <h3>Pasos:</h3>
+                <p class="pasos">1- El usuario hace click en la sección "Proyectos"<br> 2- El usuario hace click en el botón de "Crear nuevo proyecto"<br> 3- El usuario ingresa el nombre del proyecto "NDA"<br> 4- El usuario hace click en el botón "Crear".
+                    </p>
+            
+                <h3>Resultado Esperado:</h3>
+                <p class="resultados">El sistema debe mostrar un mensaje de éxito "Se ha creado el proyecto NDA".<br>El proyecto debe aparecer en la lista de proyectos disponibles con el nombre "NDA". </p>
+            
+                <h3>Resultado Obtenido:</h3>
+                <p class="resultados">El sistema muestra el mensaje de éxito correcto. <br>Sin embargo, el proyecto aparece en la lista de proyectos como "Acuerdo de Confidencialidad". </p>
+            
+                <h3>Detalles del Problema:</h3>
+                <div class="priority-severity-container">
+                    <div class="priority">
+                        <div class="indicator"></div>
+                        <p><strong>Prioridad:</strong> Alta.</p>
+                    </div>
+                    <div class="severity">
+                        <div class="indicator"></div>
+                        <p><strong>Severidad:</strong> Media.</p>
+                    </div>
+                </div>
+            
+                <h3>Entorno:</h3>
+                <div class="environment-container">
+                    <div class="browser">
+                        <p><strong>Escritorio:</strong> Windows 10</p>
+                    </div>
+                    <div class="environment">
+                        <p><strong>Ambiente:</strong> Producción.</p>
+                    </div>
+                </div>
+            
+                <h3>Archivos Adjuntos:</h3>
+<div class="gallery-container">
+    <div class="gallery-item">
+        <img src="img/e2.png" alt="Descripción de la imagen 1">
+    </div> <br>
+    <div class="gallery-item">
+        <img src="img/e1.png" alt="Descripción de la imagen 2">
+    </div> <br>
+    <div class="gallery-item">
+        <video controls>
+            <source src="img/e.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+        </video>
+    </div>
+</div>
+
+                <!-- Nueva sección de Justificación -->
+                <div class="justification-container">
+                    <h3>Justificación</h3>
+                    <i><p>Prioridad Alta:</i>
+                       <strong> La traducción incorrecta de las siglas "NDA" al inglés </strong>Aunque este problema genera una experiencia de usuario inconveniente, no impide el uso de la aplicación ni afecta sus funciones principales. Los usuarios aún pueden acceder a la aplicación y realizar las tareas necesarias, aunque con un retraso temporal.</p><br><br><i>Severidad Media:</i><strong> Aunque la funcionalidad principal del sistema (la creación de proyectos):</strong>sigue operando correctamente, la traducción incorrecta de las siglas afecta la experiencia del usuario y la precisión de la información presentada. Este problema no impide que los usuarios utilicen la aplicación, pero sí afecta la usabilidad y la confianza en la exactitud de los datos presentados. Dado que es un error de presentación y no un fallo crítico en la funcionalidad, se clasifica como severidad media.
+                </div>                 
+            </div>
+
+         <!-- Formulario 3 -->
+            <div class="form" id="form-3" style="display:none;">
+                <h3><i>[Contador de tiempo]</i> El mensaje de confirmación no desaparece correctamente y se repite como un bucle.</h3>
+                <h3>Descripción:</h3>
+                <p class="descripcion">Al ejecutar acciones consecutivas en la sección "Contador de Tiempo" de la App Clockify, el mensaje de confirmación "Entrada de tiempo creada con éxito" no desaparece como se esperaba y se repite junto con el mensaje "No se puede crear una entrada de tiempo mientras otra está en marcha". Esto afecta la experiencia del usuario al generar confusión y dificulta la comprensión de las acciones realizadas.
+                </p>
+            
+                <h3>Precondiciones:</h3>
+                <p class="precondiciones">1- El usuario ha registrado previamente el correo electrónico en el sistema &lt;/EMAIL&gt;.<br>2- El usuario debe estar en la página principal de Clockify &lt;/URL&gt;.<br>3- El usuario se encuentra en la sección "Espacio de trabajo".<br>5- El sistema no cuenta con datos de entradas de tiempo registradas.<br>-6 La configuración del idioma del sistema debe estar en "Español".</p>
+            
+                <h3>Pasos:</h3>
+                <p class="pasos">1- El usuario hace click en la sección "Contador de tiempo".<br> 2- El usuario hace click en el botón "Play" para iniciar el proyecto "testing functional".<br>3- El usuario hace click en el botón "Play" inmediatamente después repetidamente.</p>
+            
+                <h3>Resultado Esperado:</h3>
+                <p class="resultados">El sistema debería mostrar el mensaje "Entrada de tiempo creada con éxito", que debería desaparecer después de [tiempo esperado] segundos. Luego, debería mostrarse el mensaje "No se puede crear una entrada de tiempo mientras otra está en marcha", sin que haya duplicación del mensaje de confirmación.</p>
+            
+                <h3>Resultado Obtenido</h3>
+                <p class="resultados">El mensaje "Entrada de tiempo creada con éxito" aparece, pero no desaparece y se repite en bucle con el mensaje "No se puede crear una entrada de tiempo mientras otra está en marcha".
+                </p>
+            
+                <h3>Detalles del Problema:</h3>
+                <div class="priority-severity-container">
+                    <div class="priority">
+                        <div class="indicator"></div>
+                        <p><strong>Prioridad:</strong> Baja.</p>
+                    </div>
+                    <div class="severity">
+                        <div class="indicator"></div>
+                        <p><strong>Severidad:</strong> Media.</p>
+                    </div>
+                </div>
+            
+                <h3>Entorno:</h3>
+                <div class="environment-container">
+                    <div class="browser">
+                        <p><strong>Dispositivo:</strong> Móvil.</p>
+                    </div>
+                    <div class="browser">
+                        <p><strong>OS:</strong> Andriod.</p>
+                    </div>
+                    <div class="environment">
+                        <p><strong>Ambiente:</strong> Producción.</p>
+                    </div>
+                </div>
+            
+                <h3>Archivos Adjuntos:</h3>
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="img/t1.png" alt="Descripción de la imagen 1">
+                    </div>  <br>                 
+                    <div class="gallery-item">
+                        <video controls>
+                            <source src="img/t1.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
+                    </div>
+                </div>
+                <!-- Nueva sección de Justificación -->
+                <div class="justification-container">
+                    <h3>Justificación</h3>
+                    <i><p>Prioridad Baja:</i>
+                       <strong> El bug afecta una funcionalidad crítica de la aplicación:</strong> la gestión del tiempo y la creación de entradas. Los usuarios dependen de la capacidad de la aplicación para mostrar información clara y precisa al realizar acciones consecutivas. La confusión causada por los mensajes que no desaparecen puede llevar a errores en el seguimiento del tiempo y en la facturación, lo que impacta negativamente en la eficiencia del trabajo y la experiencia del usuario. Debido a esto, es fundamental abordar este problema de inmediato para asegurar que los usuarios puedan utilizar la aplicación sin inconvenientes.</p><br><br><i>Severidad Media: </i><strong> El bug afecta la experiencia del usuario y puede causar confusión:</strong> no impide por completo el uso de la aplicación. El usuario todavía puede crear entradas de tiempo, aunque de manera incorrecta o confusa. Esto significa que, a pesar de que es un problema que necesita ser resuelto, no es un fallo crítico que bloquee completamente el funcionamiento de la aplicación. Por lo tanto, la corrección es importante, pero no es tan urgente como para ser considerada una falla catastrófica.
+                </div>
+            </div>        
+
+    <script src="const.js"></script>
+</body>
+
+</html>
